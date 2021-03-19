@@ -1,14 +1,13 @@
 {
-  "name": "defi-pmf",
+  "name": "poster-subgraph",
   "version": "0.1.0",
   "scripts": {
-    "build-contract": "solc contracts/Gravity.sol --abi -o abis --overwrite && solc contracts/Gravity.sol --bin -o bin --overwrite",
-    "create": "graph create GalloDaSballo/defi-pmf --node https://api.thegraph.com/deploy/",
-    "create-local": "graph create GalloDaSballo/defi-pmf --node http://127.0.0.1:8020",
+    "create": "graph create GalloDaSballo/poster --node https://api.thegraph.com/deploy/",
+    "create-local": "graph create GalloDaSballo/poster --node http://127.0.0.1:8020",
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy GalloDaSballo/defi-pmf --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "deploy-local": "graph deploy GalloDaSballo/defi-pmf --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
+    "deploy": "graph deploy GalloDaSballo/poster --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy-local": "graph deploy GalloDaSballo/poster --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.19.0",

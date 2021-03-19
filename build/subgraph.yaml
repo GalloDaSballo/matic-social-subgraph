@@ -2,13 +2,13 @@ specVersion: 0.0.2
 description: When you post something, it shows it here
 repository: https://github.com/graphprotocol/example-subgraph
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Post
     network: mumbai
     source:
-      address: '0xf67FEC755dB9e6bf25988A61c174F8C30D5d4102'
+      address: "0xf67FEC755dB9e6bf25988A61c174F8C30D5d4102"
       abi: Poster
       startBlock: 10670754
     mapping:
@@ -19,8 +19,8 @@ dataSources:
         - UserCount
       abis:
         - name: Poster
-          file: ./abis/poster.json
+          file: Post/abis/poster.json
       eventHandlers:
         - event: NewPost(indexed address,string,string)
           handler: handlePost
-      file: ./src/mapping.ts
+      file: Post/Post.wasm
