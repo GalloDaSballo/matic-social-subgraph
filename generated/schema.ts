@@ -51,6 +51,15 @@ export class Post extends Entity {
     this.set("author", Value.fromString(value));
   }
 
+  get title(): string {
+    let value = this.get("title");
+    return value.toString();
+  }
+
+  set title(value: string) {
+    this.set("title", Value.fromString(value));
+  }
+
   get content(): string {
     let value = this.get("content");
     return value.toString();

@@ -8,9 +8,9 @@ dataSources:
     name: Post
     network: mumbai
     source:
-      address: '0xf67FEC755dB9e6bf25988A61c174F8C30D5d4102'
+      address: '0x872c3EC2863Aa7F714Dd1984dC80Fb1554a255F1'
       abi: Poster
-      startBlock: 10670754
+      startBlock: 11817759
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -21,6 +21,6 @@ dataSources:
         - name: Poster
           file: ./abis/poster.json
       eventHandlers:
-        - event: NewPost(indexed address,string,string)
+        - event: NewPost(indexed address,string,string,string)
           handler: handlePost
       file: ./src/mapping.ts

@@ -1,6 +1,7 @@
 type Post @entity {
   id: ID!
   author: String!
+  title: String!
   content: String!
   imageHash: String!
 }

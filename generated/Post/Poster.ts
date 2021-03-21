@@ -27,12 +27,16 @@ export class NewPost__Params {
     return this._event.parameters[0].value.toAddress();
   }
 
-  get content(): string {
+  get title(): string {
     return this._event.parameters[1].value.toString();
   }
 
-  get imageHash(): string {
+  get content(): string {
     return this._event.parameters[2].value.toString();
+  }
+
+  get imageHash(): string {
+    return this._event.parameters[3].value.toString();
   }
 }
 
@@ -59,12 +63,16 @@ export class PublishCall__Inputs {
     this._call = call;
   }
 
-  get content(): string {
+  get title(): string {
     return this._call.inputValues[0].value.toString();
   }
 
-  get imageHash(): string {
+  get content(): string {
     return this._call.inputValues[1].value.toString();
+  }
+
+  get imageHash(): string {
+    return this._call.inputValues[2].value.toString();
   }
 }
 
