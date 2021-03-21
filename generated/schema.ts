@@ -42,6 +42,15 @@ export class Post extends Entity {
     this.set("id", Value.fromString(value));
   }
 
+  get block(): BigInt {
+    let value = this.get("block");
+    return value.toBigInt();
+  }
+
+  set block(value: BigInt) {
+    this.set("block", Value.fromBigInt(value));
+  }
+
   get author(): string {
     let value = this.get("author");
     return value.toString();

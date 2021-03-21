@@ -1,5 +1,6 @@
 type Post @entity {
   id: ID!
+  block: BigInt!
   author: String!
   title: String!
   content: String!
